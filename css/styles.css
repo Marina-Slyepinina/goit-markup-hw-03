@@ -23,6 +23,11 @@ ul, ol {
     padding: 0;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -90,12 +95,12 @@ header .logo {
     display: flex;
 }
 
-.nav-list-item {
-    padding: 24px 0;
-}
-
 .nav-list-item:not(:last-child) {
     margin-right: 40px;
+}
+
+.nav-list-link {
+    padding: 24px 0;
 }
 
 .link {
@@ -145,7 +150,9 @@ address .contacts-list {
     font-size: 56px;
     line-height: 1.07;
     text-align: center;
+    margin: 0 auto;
     margin-bottom: 48px;
+    max-width: 496px;
 }
 
 .hero-button {
@@ -161,7 +168,7 @@ address .contacts-list {
     border-radius: 4px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     margin: 0 auto;
-
+    min-width: 169px;
 }
 
 .hero-button:hover, .hero-button:focus {
@@ -169,11 +176,12 @@ address .contacts-list {
 }
 
 /* ---------- Features ---------- */
+.features-section {
+    padding: 120px 0;
+}
 
 .features-list {
-    padding: 120px 0;
     display: flex;
-    /* justify-content: space-between; */
 }
 
 .features-card {
@@ -207,21 +215,20 @@ address .contacts-list {
 
 .team-list {
     display: flex;
+}
 
+.team-card-container {
+    padding: 32px 0;
+    border-radius: 0 0 4px 4px;
 }
 
 .team-card {
     background-color: #FFFFFF;
     width: calc((100% - 24px * 3) / 4);
-    padding-bottom: 32px;
 }
 
 .team-card:not(:last-child) {
     margin-right: 24px;
-}
-
-.team-section img {
-    margin-bottom: 32px;
 }
 
 .team-card-title {
@@ -250,14 +257,12 @@ address .contacts-list {
 
 .portfolio-card {
     width: calc((100% - 24px * 2) / 3);
-    border-bottom: 1px solid #e7e9fc;
-    border-left: 1px solid #e7e9fc;
-    border-right: 1px solid #e7e9fc;
-    padding-bottom: 32px;
 }
 
-.portfolio-section img {
-    margin-bottom: 32px;
+.portfolio-card-container {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
 }
 
 .portfolio-card-title {
@@ -266,11 +271,6 @@ address .contacts-list {
     line-height: 1.2;
     color: #2e2f42;    
     margin-bottom: 8px;
-    padding-left: 16px;
-}
-
-.portfolio-card-text {
-    padding-left: 16px;
 }
 
 /* ---------- FOOTER ---------- */
@@ -280,15 +280,13 @@ address .contacts-list {
 }
 
 .footer .logo {
-    display: block;
+    display: inline-block;
     margin-bottom: 16px;
 }
-
 
 .logo-footer {
    color: #f4f4fd; 
 }
-
 
 .footer-text {
     color: #f4f4fd;
